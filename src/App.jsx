@@ -1,14 +1,16 @@
 import FooterBboyLinkinStyle from "./components/FooterBboyLinkinStyle";
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [color, setColor] = useState("");
-
+  useEffect(() => {
+    console.log('pruebita')
+  },[])
   return (
     <>
       <main
-        style={{ background: "#fff", minHeight: "100vh", padding: "100px" }}
+        style={{ background: "#0a7e86ff", minHeight: "100vh", padding: "100px" }}
       >
         <div
           style={{
@@ -34,7 +36,7 @@ function App() {
               style={{
                 width: "80px",
                 height: "80px",
-                background: color || "#eee",
+                background: color || "#681b1bff",
                 borderRadius: "4px",
                 marginRight: "24px",
               }}
