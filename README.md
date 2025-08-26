@@ -29,7 +29,7 @@ git clone https://github.com/your-username/colorwave.git
 cd colorwave
 npm install
 npm start
-
+```
 ✨ Author
 Created by Pablo Germán Jiménez
 Design inspired by 💥 hip-hop vibes from Bboy Linkin
