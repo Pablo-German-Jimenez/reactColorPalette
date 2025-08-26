@@ -1,14 +1,17 @@
 import FooterBboyLinkinStyle from "./components/FooterBboyLinkinStyle";
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [color, setColor] = useState("");
-
+  const colorLocalStorage = JSON.parse(localStorage.getItem('color') )|| [];
+  const [color, setColor] = useState([colorLocalStorage]);
+  useEffect(() => {
+    localStorage.setItem('color',JSON.stringify(color))
+  },[color])
   return (
     <>
       <main
-        style={{ background: "#fff", minHeight: "100vh", padding: "100px" }}
+        style={{ backgroundImage: "url('../public/barron.jpg')", minHeight: "100vh", padding: "70px",backgroundPosition: "center" }}
       >
         <div
           style={{
@@ -20,7 +23,7 @@ function App() {
             padding: "32px",
           }}
         >
-          <h3 style={{ marginBottom: "24px" }}>Choice your floor to spin♪</h3>
+          <h3 style={{ marginBottom: "24px", textAlign:'center' ,color: 'orange'}}>Choice your floor to spin♪</h3>
           <div
             style={{
               display: "flex",
@@ -34,7 +37,7 @@ function App() {
               style={{
                 width: "80px",
                 height: "80px",
-                background: color || "#eee",
+                background: color || "#681b1bff",
                 borderRadius: "4px",
                 marginRight: "24px",
               }}
