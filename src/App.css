@@ -113,7 +113,7 @@ flex-grow: 1;
 .footer-animado {
   position: relative;
   overflow: hidden;
-  color: #fff;
+  color: #d49c23;
   font-weight: bold;
   background: linear-gradient(270deg, #0074d9, #e5e4e2, #0074d9, #e5e4e2);
   background-size: 400% 400%;
