@@ -3,14 +3,15 @@ import "./App.css";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [color, setColor] = useState("");
+  const colorLocalStorage = JSON.parse(localStorage.getItem('color') )|| [];
+  const [color, setColor] = useState([colorLocalStorage]);
   useEffect(() => {
-    console.log('pruebita')
-  },[])
+    localStorage.setItem('color',JSON.stringify(color))
+  },[color])
   return (
     <>
       <main
-        style={{ background: "#0a7e86ff", minHeight: "100vh", padding: "100px" }}
+        style={{ backgroundImage: "url('../public/barron.jpg')", minHeight: "100vh", padding: "70px",backgroundPosition: "center" }}
       >
         <div
           style={{
@@ -22,7 +23,7 @@ function App() {
             padding: "32px",
           }}
         >
-          <h3 style={{ marginBottom: "24px" }}>Choice your floor to spin♪</h3>
+          <h3 style={{ marginBottom: "24px", textAlign:'center' ,color: 'orange'}}>Choice your floor to spin♪</h3>
           <div
             style={{
               display: "flex",
