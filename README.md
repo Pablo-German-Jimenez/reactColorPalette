@@ -1,4 +1,4 @@
-Try code ♥https://reactcolorpalete.netlify.app/♪
+Try code ♥https://reactcolorpalete.netlify.app ♪
 # 🎨 ColorWave — Reactive Color Palette
 
 Welcome to ColorWave!  
