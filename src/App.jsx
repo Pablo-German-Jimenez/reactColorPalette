@@ -80,7 +80,7 @@ function App() {
                 style={{
                   width: "80px",
                   height: "80px",
-                  background: "#2d1582",
+                  background: {setColor},
                   margin: "0 auto 16px",
                   borderRadius: "4px",
                 }}
