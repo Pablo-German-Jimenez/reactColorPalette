@@ -1,6 +1,10 @@
+
+import NavBarBboyLinkinStyle from "./components/NavBarBboyLinkinStyle";
 import FooterBboyLinkinStyle from "./components/FooterBboyLinkinStyle";
 import "./App.css";
 import { useEffect, useState } from "react";
+
+
 
 function App() {
   const colorLocalStorage = JSON.parse(localStorage.getItem('color') )|| [];
@@ -18,15 +22,17 @@ function App() {
   
   return (
     <>
+    
+     <NavBarBboyLinkinStyle/>
+    <FooterBboyLinkinStyle/>
       <main
         style={{
           backgroundImage: "url('/barron.jpg')",
           minHeight: "100vh",
           padding: "100px",
           backgroundPosition: "center",
+                }}>
           
-          objectFit: "cover",
-        }}>
         <div
           style={{
             maxWidth: "700px",
@@ -188,7 +194,7 @@ function App() {
         </div>
       </main>
       <FooterBboyLinkinStyle/>
-    </>
+  </>
   );
 }
 
