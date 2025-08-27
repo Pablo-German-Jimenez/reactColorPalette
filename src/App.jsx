@@ -7,12 +7,26 @@ function App() {
   const [color, setColor] = useState([colorLocalStorage]);
   useEffect(() => {
     localStorage.setItem('color',JSON.stringify(color))
-  },[color])
+  
+    let colorNuevo = document.getElementById('color-cambia');
+    colorNuevo.style.background = color;
+  
+  },[color], 
+  
+
+)
+  
   return (
     <>
       <main
-        style={{ backgroundImage: "url('../public/barron.jpg')", minHeight: "100vh", padding: "70px",backgroundPosition: "center" }}
-      >
+        style={{
+          backgroundImage: "url('/barron.jpg')",
+          minHeight: "100vh",
+          padding: "100px",
+          backgroundPosition: "center",
+          
+          objectFit: "cover",
+        }}>
         <div
           style={{
             maxWidth: "700px",
@@ -21,6 +35,7 @@ function App() {
             borderRadius: "6px",
             boxShadow: "0 2px 8px #0002",
             padding: "32px",
+            backgroundSize: "cover",
           }}
         >
           <h3 style={{ marginBottom: "24px", textAlign:'center' ,color: 'orange'}}>Choice your floor to spin♪</h3>
@@ -77,6 +92,7 @@ function App() {
                 Nombre color
               </div>
               <div
+              id="color-cambia"
                 style={{
                   width: "80px",
                   height: "80px",
