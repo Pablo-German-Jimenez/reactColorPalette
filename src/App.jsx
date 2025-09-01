@@ -37,7 +37,7 @@ function App() {
           style={{
             maxWidth: "700px",
             margin: "0 auto",
-            border: "1px solid #ccc",
+            border: "1px solid #ccccccff",
             borderRadius: "6px",
             boxShadow: "0 2px 8px #0002",
             padding: "32px",
